@@ -93,12 +93,21 @@ logCPMdf <- as.data.frame(logCPM)
 wt14.vs.d14.topgenes <- df$gene[1:100]
 logCPMdf$name <- rownames(logCPMdf)
 i <- which(logCPMdf$name %in% wt14.vs.d14.topgenes)
+<<<<<<< HEAD
 mycol <- colorpanel(1000,"red","black","green")
 heatmap.2(logCPM[i,], scale="row",
           labRow=logCPMdf$name[i], labCol=group, 
           col=viridis(n = 64,option = "A",direction = 1), trace="none", density.info="none", 
           margin=c(8,6), lhei=c(2,10), dendrogram="column")
 dev.off()
+=======
+mycol <- colorpanel(1000,"blue","white","red")
+heatmap.2(logCPM[i,], scale="row",
+          labRow=logCPMdf$name[i], labCol=group, 
+          col=mycol, trace="none", density.info="none", 
+          margin=c(8,6), lhei=c(2,10), dendrogram="column")
+
+>>>>>>> eccf4c55f9e610bf3bb8d4a0158f37bf1714c5e8
 
 #prove per hm 
 #hm tot delle 4 condizioni
